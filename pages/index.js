@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import { Button, Table } from '@nextui-org/react'
 
 export default function Home() {
   return (
@@ -12,44 +13,44 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
+        <Button>Button NEXT UI</Button>
 
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}
-          >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
+        <Table
+          aria-label="Example table with static content"
+          css={{
+            height: "auto",
+            minWidth: "100%",
+          }}
+        >
+          <Table.Header>
+            <Table.Column>NAME</Table.Column>
+            <Table.Column>ROLE</Table.Column>
+            <Table.Column>STATUS</Table.Column>
+          </Table.Header>
+          <Table.Body>
+            <Table.Row key="1">
+              <Table.Cell>Tony Reichert</Table.Cell>
+              <Table.Cell>CEO</Table.Cell>
+              <Table.Cell>Active</Table.Cell>
+            </Table.Row>
+            <Table.Row key="2">
+              <Table.Cell>Zoey Lang</Table.Cell>
+              <Table.Cell>Technical Lead</Table.Cell>
+              <Table.Cell>Paused</Table.Cell>
+            </Table.Row>
+            <Table.Row key="3">
+              <Table.Cell>Jane Fisher</Table.Cell>
+              <Table.Cell>Senior Developer</Table.Cell>
+              <Table.Cell>Active</Table.Cell>
+            </Table.Row>
+            <Table.Row key="4">
+              <Table.Cell>William Howard</Table.Cell>
+              <Table.Cell>Community Manager</Table.Cell>
+              <Table.Cell>Vacation</Table.Cell>
+            </Table.Row>
+          </Table.Body>
+        </Table>
       </main>
 
       <footer className={styles.footer}>
